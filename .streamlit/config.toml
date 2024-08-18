@@ -1,0 +1,6 @@
+[server]
+enableXsrfProtection = false
+folderWatchBlacklist = [".ipynb_checkpoints", "__pycache__", ".git", ".vscode"]
+runOnSave = false
+
+[browser]
