@@ -1,6 +1,5 @@
 <div align='center'>
-<img src="https://summerofcode.withgoogle.com/assets/media/logo-sun.svg" width=200px height=100px>
-<img src="https://hnn.brown.edu/wp-content/uploads/hnn-medium.png" height=100px  width=200px>
+<img src="https://github.com/user-attachments/assets/3b1fd6a0-a31c-49ff-b395-dc1c9257c4cd">
 </div>
 
 ![Supported Python Versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue)
