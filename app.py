@@ -1,4 +1,5 @@
 PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION = 'python'
+
 import sys
 import subprocess
 __import__('pysqlite3')
