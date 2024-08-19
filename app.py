@@ -50,13 +50,12 @@ class HNNChatbot:
             doc for file in files for doc in self.load_documents(file)]
 
         text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=1000, chunk_overlap=200)
+            chunk_size=2000, chunk_overlap=200)
         final_documents = text_splitter.split_documents(documents)
 
         vectorstore = Chroma.from_documents(
             documents=final_documents,
             embedding=embeddings,
-            persist_directory="/tmp/.chroma",
             collection_name="documents_collection"
         )
 
