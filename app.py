@@ -25,15 +25,7 @@ class HNNChatbot:
         self.llm = ChatGroq(groq_api_key=self.groq_api_key,
                             model_name="Llama3-8b-8192")
         self.prompt = ChatPromptTemplate.from_template(
-            """
-            Answer the questions based on the provided context only.
-            Please provide the most accurate response based on the question.
-            Response Format: Your response must be in markdown format.
-
-            {context}
-
-            Question: {input}
-            """
+           st.secrets['PROMPT']
         )
         self.vectorstore = self.initialize_vectorstore()
 
