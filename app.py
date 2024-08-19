@@ -107,7 +107,7 @@ def main():
         st.session_state.vectorstore = chatbot.vectorstore
 
     user_input = st.text_input("Enter your question:")
-    st.markdown("Made with 🤍 by `samadpls`")
+    st.markdown("Made with 🤍 by [`samadpls`](https://github.com/samadpls)")
     if user_input:
         with st.spinner("Querying documents..."):
             answer, response_time = chatbot.query_documents(user_input)
