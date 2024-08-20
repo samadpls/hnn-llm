@@ -5,6 +5,7 @@ __import__('pysqlite3')
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import os
 import time
+import shutil
 import streamlit as st
 from streamlit import secrets
 from prompt import *
@@ -19,6 +20,7 @@ from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_community.vectorstores import Chroma
 
 
+shutil.rmtree('/tmp/.chroma', ignore_errors=True)
 class HNNChatbot:
     def __init__(self):
         self.groq_api_key = secrets["GROQ_API_KEY"]
