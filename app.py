@@ -31,7 +31,6 @@ class HNNChatbot:
         )
         self.vectorstore = self.initialize_vectorstore()
 
-    @st.cache(ttl=30*60)
     def initialize_vectorstore(self):
         embeddings = HuggingFaceBgeEmbeddings(
             model_name="BAAI/bge-small-en-v1.5",
@@ -63,7 +62,6 @@ class HNNChatbot:
         except Exception:
             return []
 
-    @st.cache(ttl=30*60)
     def query_documents(self, input_prompt):
         retrieval_chain = self.create_retrieval_chain()
 
