@@ -31,7 +31,7 @@ class HNNChatbot:
         )
         self.vectorstore = self.initialize_vectorstore()
 
-    @st.cache_resource(ttl=30*60, allow_output_mutation=True)
+    @st.cache(ttl=30*60)
     def initialize_vectorstore(self):
         embeddings = HuggingFaceBgeEmbeddings(
             model_name="BAAI/bge-small-en-v1.5",
