@@ -29,7 +29,7 @@ class HNNChatbot:
         self.prompt = ChatPromptTemplate.from_template(
            st.secrets['PROMPT']
         )
-        self.vectorstore = self.initialize_vectorstore()
+        self.vectorstore = None
 
     def initialize_vectorstore(self):
         embeddings = HuggingFaceBgeEmbeddings(
@@ -63,6 +63,8 @@ class HNNChatbot:
             return []
 
     def query_documents(self, input_prompt):
+        if self.vectorstore is None:
+            self.vectorstore = self.initialize_vectorstore()
         retrieval_chain = self.create_retrieval_chain()
 
         start = time.process_time()
