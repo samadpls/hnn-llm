@@ -1,3 +1,5 @@
+# Authors: Abdul Samad Siddiqui <abdulsamadsid1@gmail.com>
+#          Maira Usman <maira.usman5703@gmail.com>
 import os
 import requests
 from bs4 import BeautifulSoup
